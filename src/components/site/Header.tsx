@@ -8,7 +8,6 @@ const links = [
   { to: "/menu", label: "Menú" },
   { to: "/galeria", label: "Galería" },
   { to: "/eventos", label: "Eventos" },
-  { to: "/reservas", label: "Reservas" },
   { to: "/contacto", label: "Contacto" },
 ];
 
