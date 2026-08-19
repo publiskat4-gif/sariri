@@ -99,12 +99,11 @@ function Index() {
         />
         <div className="absolute inset-0 bg-forest-deep/50" />
         <div className="absolute inset-0 flex flex-col items-center justify-center px-5 text-center text-primary-foreground">
-          <h1 className="font-display text-5xl font-semibold tracking-[0.14em] md:text-7xl">
-            SARIRI
-          </h1>
-          <p className="mt-2 text-[0.7rem] tracking-[0.55em] text-primary-foreground/85">
-            RESTAURANTE
-          </p>
+          <img
+            src="/logo-home.png"
+            alt="SARIRI HACIENDA"
+            className="h-20 w-auto object-contain md:h-32"
+          />
           <p className="mt-6 font-display text-xl italic md:text-2xl">
             Que no te lo cuenten vívelo
           </p>

@@ -120,13 +120,13 @@ function Reservas() {
           </button>
           {enviado ? (
             <p className="text-center text-xs text-forest">
-              Recibimos tu solicitud, te contactaremos pronto.
+              ¡Redirigiendo a WhatsApp! Completa el envío en el chat.
             </p>
           ) : null}
 
           <div className="mt-4 flex flex-wrap items-center gap-3 rounded-sm border border-border bg-card p-4">
             <p className="flex-1 text-xs text-muted-foreground">
-              ¿Prefieres reservar por WhatsApp?
+              ¿Prefieres reservar por WhatsApp directo?
             </p>
             <a
               href="https://wa.me/593997194675"

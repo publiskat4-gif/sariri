@@ -63,7 +63,6 @@ export function Footer() {
             {[
               { to: "/nosotros", label: "Nosotros" },
               { to: "/menu", label: "Menú" },
-              { to: "/hacienda", label: "El Lugar" },
               { to: "/galeria", label: "Galería" },
               { to: "/eventos", label: "Eventos" },
               { to: "/contacto", label: "Contacto" },
