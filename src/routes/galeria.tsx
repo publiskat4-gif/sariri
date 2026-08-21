@@ -10,6 +10,10 @@ import img7 from "@/assets/sariri-img-7.jpg";
 import img8 from "@/assets/sariri-img-8.jpg";
 import img9 from "@/assets/sariri-img-9.jpg";
 import img10 from "@/assets/sariri-img-10.jpg";
+import platoCuy from "@/assets/plato-cuy.jpg";
+import platoParrillada from "@/assets/plato-parrillada.jpg";
+import platoSeco from "@/assets/plato-seco.jpg";
+import platoTrucha from "@/assets/plato-trucha.jpg";
 import { SectionHeading } from "@/components/site/Ornament";
 
 export const Route = createFileRoute("/galeria")({
@@ -35,12 +39,16 @@ const filtros = ["Todo", "Gastronomía", "Instalaciones", "Paisaje", "Videos"] a
 
 const items = [
   { type: "image", src: img7, cat: "Instalaciones", alt: "Restaurante Sariri y entorno de montaña" },
-  { type: "image", src: img1, cat: "Gastronomía", alt: "Gastronomía tradicional lojana" },
-  { type: "image", src: img3, cat: "Gastronomía", alt: "Plato tradicional de Sariri" },
-  { type: "image", src: img6, cat: "Gastronomía", alt: "Especialidades lojanas de la casa" },
-  { type: "image", src: img8, cat: "Gastronomía", alt: "Sabores típicos de montaña" },
+  { type: "image", src: platoCuy, cat: "Gastronomía", alt: "Cuy asado tradicional de Loja" },
+  { type: "image", src: platoTrucha, cat: "Gastronomía", alt: "Trucha a la plancha de montaña" },
+  { type: "image", src: platoParrillada, cat: "Gastronomía", alt: "Parrillada Sariri familiar" },
+  { type: "image", src: platoSeco, cat: "Gastronomía", alt: "Seco tradicional lojano" },
   { type: "image", src: img2, cat: "Instalaciones", alt: "Interiores acogedores de Sariri" },
   { type: "image", src: img10, cat: "Instalaciones", alt: "Espacios campestres y familiares" },
+  { type: "image", src: img1, cat: "Paisaje", alt: "Contacto con la naturaleza y animales" },
+  { type: "image", src: img3, cat: "Paisaje", alt: "Atardeceres en la montaña" },
+  { type: "image", src: img6, cat: "Instalaciones", alt: "Decoración romántica para momentos especiales" },
+  { type: "image", src: img8, cat: "Instalaciones", alt: "Celebraciones familiares en nuestro comedor" },
   { type: "image", src: img4, cat: "Paisaje", alt: "Paisajes de montaña en Loja" },
   { type: "image", src: img5, cat: "Paisaje", alt: "Naturaleza y entorno natural" },
   { type: "image", src: img9, cat: "Paisaje", alt: "Atardeceres en Sariri" },
