@@ -62,7 +62,8 @@ export const Route = createFileRoute("/")({
           ],
           "sameAs": [
             "https://www.instagram.com/saririrestaurante?igsh=YThxcG85ZGd4ZmZ6",
-            "https://www.tiktok.com/@saririrestaurante?_r=1&_t=ZS-98q0js1eCZR"
+            "https://www.tiktok.com/@saririrestaurante?_r=1&_t=ZS-98q0js1eCZR",
+            "https://www.facebook.com/share/1DXewSPNoQ/"
           ],
           "servesCuisine": "Tradicional Lojana",
           "priceRange": "$$"

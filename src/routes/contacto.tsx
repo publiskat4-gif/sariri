@@ -6,6 +6,7 @@ import {
   Mail,
   Clock,
   Instagram,
+  Facebook,
 } from "lucide-react";
 import { SectionHeading } from "@/components/site/Ornament";
 
@@ -30,6 +31,11 @@ const socials = [
     icon: Instagram,
     href: "https://www.instagram.com/saririrestaurante?igsh=YThxcG85ZGd4ZmZ6",
     label: "Instagram",
+  },
+  {
+    icon: Facebook,
+    href: "https://www.facebook.com/share/1DXewSPNoQ/",
+    label: "Facebook",
   },
   {
     icon: TiktokIcon,

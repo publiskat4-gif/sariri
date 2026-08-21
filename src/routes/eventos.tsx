@@ -1,6 +1,14 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Cake, Church, Baby, Users, Briefcase, Gem } from "lucide-react";
+import { useState } from "react";
+import { Cake, Church, Baby, Users, Briefcase, Gem, X } from "lucide-react";
 import { SectionHeading } from "@/components/site/Ornament";
+
+import img2 from "@/assets/sariri-img-2.jpg";
+import img5 from "@/assets/sariri-img-5.jpg";
+import img7 from "@/assets/sariri-img-7.jpg";
+import img9 from "@/assets/sariri-img-9.jpg";
+import img10 from "@/assets/sariri-img-10.jpg";
+import mesa from "@/assets/mesa-reserva.jpg";
 
 export const Route = createFileRoute("/eventos")({
   head: () => ({
@@ -22,12 +30,42 @@ export const Route = createFileRoute("/eventos")({
 });
 
 const tipos = [
-  { icon: Cake, label: "Cumpleaños" },
-  { icon: Gem, label: "Matrimonios" },
-  { icon: Church, label: "Bautizos" },
-  { icon: Baby, label: "Comuniones" },
-  { icon: Users, label: "Reuniones" },
-  { icon: Briefcase, label: "Eventos Empresariales" },
+  {
+    icon: Cake,
+    label: "Cumpleaños",
+    img: img10,
+    desc: "Celebra tu día especial rodeado de naturaleza, fogatas y el mejor ambiente de montaña con tus seres queridos.",
+  },
+  {
+    icon: Gem,
+    label: "Matrimonios",
+    img: mesa,
+    desc: "Una boda inolvidable con espectaculares banquetes y mesas perfectamente decoradas para tu día de ensueño.",
+  },
+  {
+    icon: Church,
+    label: "Bautizos",
+    img: img5,
+    desc: "Un día memorable de unión familiar rodeados de naturaleza, áreas verdes y juegos infantiles para los más pequeños.",
+  },
+  {
+    icon: Baby,
+    label: "Comuniones",
+    img: img2,
+    desc: "Disfruta de una recepción familiar cálida y un servicio de banquete de primera en nuestro acogedor salón interior.",
+  },
+  {
+    icon: Users,
+    label: "Reuniones",
+    img: img7,
+    desc: "Reuniones familiares, almuerzos grupales y banquetes privados con la mejor atención personalizada.",
+  },
+  {
+    icon: Briefcase,
+    label: "Eventos Empresariales",
+    img: img9,
+    desc: "Sorprende a tu equipo en un entorno campestre inspirador con comida tradicional, mirador y área de fogata.",
+  },
 ];
 
 const paquetes = [
@@ -63,6 +101,8 @@ const paquetes = [
 ];
 
 function Eventos() {
+  const [activeEvent, setActiveEvent] = useState<(typeof tipos)[number] | null>(null);
+
   return (
     <div className="mx-auto max-w-5xl px-5 py-16">
       <SectionHeading
@@ -70,19 +110,66 @@ function Eventos() {
         subtitle="Hacemos de tus momentos algo inolvidable"
       />
 
-      <div className="mt-12 grid grid-cols-3 gap-4 md:grid-cols-6">
+      <div className="mt-12 grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-6">
         {tipos.map((t) => (
-          <div
+          <button
             key={t.label}
-            className="flex flex-col items-center gap-2 rounded-sm border border-border bg-card p-4 text-center"
+            type="button"
+            onClick={() => setActiveEvent(t)}
+            className="flex flex-col items-center gap-3 rounded-sm border border-border bg-card p-5 text-center cursor-pointer transition-all hover:border-forest hover:shadow-xs group"
           >
-            <t.icon className="size-6 text-forest" />
-            <p className="text-[0.6rem] uppercase tracking-[0.12em] text-muted-foreground">
+            <t.icon className="size-7 text-forest group-hover:scale-110 transition-transform" />
+            <p className="text-[0.6rem] font-semibold uppercase tracking-[0.14em] text-muted-foreground group-hover:text-forest">
               {t.label}
             </p>
-          </div>
+          </button>
         ))}
       </div>
+
+      {activeEvent && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-4 backdrop-blur-xs animate-in fade-in duration-200"
+          onClick={() => setActiveEvent(null)}
+        >
+          <div
+            className="relative max-w-md w-full rounded-sm bg-card p-6 shadow-xl border border-border animate-in zoom-in-95 duration-200"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              type="button"
+              className="absolute right-4 top-4 text-muted-foreground hover:text-foreground cursor-pointer"
+              onClick={() => setActiveEvent(null)}
+            >
+              <X className="size-5" />
+            </button>
+            <h3 className="font-display text-2xl font-semibold text-forest tracking-wide text-center">
+              {activeEvent.label}
+            </h3>
+            <p className="mt-1 text-center text-[0.6rem] text-gold uppercase tracking-[0.2em] font-semibold">
+              Sariri Restaurante
+            </p>
+            <div className="mt-4 overflow-hidden rounded-sm aspect-[4/3] bg-muted shadow-sm">
+              <img
+                src={activeEvent.img}
+                alt={activeEvent.label}
+                className="h-full w-full object-cover"
+              />
+            </div>
+            <p className="mt-4 text-center text-xs leading-relaxed text-muted-foreground">
+              {activeEvent.desc}
+            </p>
+            <div className="mt-6 flex justify-center">
+              <Link
+                to="/contacto"
+                onClick={() => setActiveEvent(null)}
+                className="rounded-sm bg-forest px-6 py-2.5 text-center text-[0.65rem] font-semibold uppercase tracking-[0.16em] text-primary-foreground transition-colors hover:bg-forest-deep"
+              >
+                Cotizar ahora
+              </Link>
+            </div>
+          </div>
+        </div>
+      )}
 
       <p className="mt-16 text-center text-xs uppercase tracking-[0.28em] text-forest">
         Paquetes especiales

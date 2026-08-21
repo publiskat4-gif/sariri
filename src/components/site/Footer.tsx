@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Instagram, MapPin, Phone, Clock } from "lucide-react";
+import { Instagram, Facebook, MapPin, Phone, Clock } from "lucide-react";
 
 function TiktokIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
@@ -22,6 +22,11 @@ const socials = [
     icon: Instagram,
     href: "https://www.instagram.com/saririrestaurante?igsh=YThxcG85ZGd4ZmZ6",
     label: "Instagram",
+  },
+  {
+    icon: Facebook,
+    href: "https://www.facebook.com/share/1DXewSPNoQ/",
+    label: "Facebook",
   },
   {
     icon: TiktokIcon,
