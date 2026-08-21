@@ -10,10 +10,8 @@ import img7 from "@/assets/sariri-img-7.jpg";
 import img8 from "@/assets/sariri-img-8.jpg";
 import img9 from "@/assets/sariri-img-9.jpg";
 import img10 from "@/assets/sariri-img-10.jpg";
-import platoCuy from "@/assets/plato-cuy.jpg";
-import platoParrillada from "@/assets/plato-parrillada.jpg";
-import platoSeco from "@/assets/plato-seco.jpg";
-import platoTrucha from "@/assets/plato-trucha.jpg";
+import gastro1 from "@/assets/sariri-img-gastro-1.jpg";
+import gastro2 from "@/assets/sariri-img-gastro-2.jpg";
 import { SectionHeading } from "@/components/site/Ornament";
 
 export const Route = createFileRoute("/galeria")({
@@ -39,10 +37,8 @@ const filtros = ["Todo", "Gastronomía", "Instalaciones", "Paisaje", "Videos"] a
 
 const items = [
   { type: "image", src: img7, cat: "Instalaciones", alt: "Restaurante Sariri y entorno de montaña" },
-  { type: "image", src: platoCuy, cat: "Gastronomía", alt: "Cuy asado tradicional de Loja" },
-  { type: "image", src: platoTrucha, cat: "Gastronomía", alt: "Trucha a la plancha de montaña" },
-  { type: "image", src: platoParrillada, cat: "Gastronomía", alt: "Parrillada Sariri familiar" },
-  { type: "image", src: platoSeco, cat: "Gastronomía", alt: "Seco tradicional lojano" },
+  { type: "image", src: gastro1, cat: "Gastronomía", alt: "Especialidad de la casa Sariri" },
+  { type: "image", src: gastro2, cat: "Gastronomía", alt: "Plato tradicional lojano" },
   { type: "image", src: img2, cat: "Instalaciones", alt: "Interiores acogedores de Sariri" },
   { type: "image", src: img10, cat: "Instalaciones", alt: "Espacios campestres y familiares" },
   { type: "image", src: img1, cat: "Paisaje", alt: "Contacto con la naturaleza y animales" },

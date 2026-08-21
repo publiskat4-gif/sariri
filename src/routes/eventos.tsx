@@ -5,10 +5,10 @@ import { SectionHeading } from "@/components/site/Ornament";
 
 import img2 from "@/assets/sariri-img-2.jpg";
 import img5 from "@/assets/sariri-img-5.jpg";
-import img7 from "@/assets/sariri-img-7.jpg";
 import img9 from "@/assets/sariri-img-9.jpg";
-import img10 from "@/assets/sariri-img-10.jpg";
 import mesa from "@/assets/mesa-reserva.jpg";
+import eventBirthday from "@/assets/sariri-img-event-birthday.jpg";
+import eventProposal from "@/assets/sariri-img-event-proposal.jpg";
 
 export const Route = createFileRoute("/eventos")({
   head: () => ({
@@ -33,13 +33,13 @@ const tipos = [
   {
     icon: Cake,
     label: "Cumpleaños",
-    img: img10,
+    img: eventBirthday,
     desc: "Celebra tu día especial rodeado de naturaleza, fogatas y el mejor ambiente de montaña con tus seres queridos.",
   },
   {
     icon: Gem,
     label: "Matrimonios",
-    img: mesa,
+    img: eventProposal,
     desc: "Una boda inolvidable con espectaculares banquetes y mesas perfectamente decoradas para tu día de ensueño.",
   },
   {
@@ -57,7 +57,7 @@ const tipos = [
   {
     icon: Users,
     label: "Reuniones",
-    img: img7,
+    img: mesa,
     desc: "Reuniones familiares, almuerzos grupales y banquetes privados con la mejor atención personalizada.",
   },
   {
