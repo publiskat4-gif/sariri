@@ -1,14 +1,13 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
-import { Cake, Church, Baby, Users, Briefcase, Gem, X } from "lucide-react";
+import { Cake, Church, Users, Briefcase, Gem, X } from "lucide-react";
 import { SectionHeading } from "@/components/site/Ornament";
 
-import img2 from "@/assets/sariri-img-2.jpg";
-import img9 from "@/assets/sariri-img-9.jpg";
-import mesa from "@/assets/mesa-reserva.jpg";
 import eventBirthday from "@/assets/sariri-img-event-birthday.jpg";
 import eventProposal from "@/assets/sariri-img-event-proposal.jpg";
 import eventFamily from "@/assets/sariri-img-event-family.jpg";
+import eventReunion from "@/assets/sariri-img-event-reunion.jpg";
+import eventCorporate from "@/assets/sariri-img-event-corporate.jpg";
 
 export const Route = createFileRoute("/eventos")({
   head: () => ({
@@ -49,21 +48,15 @@ const tipos = [
     desc: "Un día memorable de unión familiar rodeados de naturaleza, áreas verdes y juegos infantiles para los más pequeños.",
   },
   {
-    icon: Baby,
-    label: "Comuniones",
-    img: img2,
-    desc: "Disfruta de una recepción familiar cálida y un servicio de banquete de primera en nuestro acogedor salón interior.",
-  },
-  {
     icon: Users,
     label: "Reuniones",
-    img: mesa,
+    img: eventReunion,
     desc: "Reuniones familiares, almuerzos grupales y banquetes privados con la mejor atención personalizada.",
   },
   {
     icon: Briefcase,
     label: "Eventos Empresariales",
-    img: img9,
+    img: eventCorporate,
     desc: "Sorprende a tu equipo en un entorno campestre inspirador con comida tradicional, mirador y área de fogata.",
   },
 ];
@@ -110,7 +103,7 @@ function Eventos() {
         subtitle="Hacemos de tus momentos algo inolvidable"
       />
 
-      <div className="mt-12 grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-6">
+      <div className="mt-12 grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-5">
         {tipos.map((t) => (
           <button
             key={t.label}

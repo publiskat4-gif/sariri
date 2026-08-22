@@ -12,6 +12,7 @@ import img9 from "@/assets/sariri-img-9.jpg";
 import img10 from "@/assets/sariri-img-10.jpg";
 import gastro1 from "@/assets/sariri-img-gastro-1.jpg";
 import gastro2 from "@/assets/sariri-img-gastro-2.jpg";
+import galleryBus from "@/assets/sariri-img-gallery-bus.jpg";
 import { SectionHeading } from "@/components/site/Ornament";
 
 export const Route = createFileRoute("/galeria")({
@@ -37,6 +38,7 @@ const filtros = ["Todo", "Gastronomía", "Instalaciones", "Paisaje", "Videos"] a
 
 const items = [
   { type: "image", src: img7, cat: "Instalaciones", alt: "Restaurante Sariri y entorno de montaña" },
+  { type: "image", src: galleryBus, cat: "Instalaciones", alt: "El bus restaurante de Sariri" },
   { type: "image", src: gastro1, cat: "Gastronomía", alt: "Especialidad de la casa Sariri" },
   { type: "image", src: gastro2, cat: "Gastronomía", alt: "Plato tradicional lojano" },
   { type: "image", src: img2, cat: "Instalaciones", alt: "Interiores acogedores de Sariri" },
