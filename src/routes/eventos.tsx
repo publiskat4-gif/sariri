@@ -4,11 +4,11 @@ import { Cake, Church, Baby, Users, Briefcase, Gem, X } from "lucide-react";
 import { SectionHeading } from "@/components/site/Ornament";
 
 import img2 from "@/assets/sariri-img-2.jpg";
-import img5 from "@/assets/sariri-img-5.jpg";
 import img9 from "@/assets/sariri-img-9.jpg";
 import mesa from "@/assets/mesa-reserva.jpg";
 import eventBirthday from "@/assets/sariri-img-event-birthday.jpg";
 import eventProposal from "@/assets/sariri-img-event-proposal.jpg";
+import eventFamily from "@/assets/sariri-img-event-family.jpg";
 
 export const Route = createFileRoute("/eventos")({
   head: () => ({
@@ -45,7 +45,7 @@ const tipos = [
   {
     icon: Church,
     label: "Bautizos",
-    img: img5,
+    img: eventFamily,
     desc: "Un día memorable de unión familiar rodeados de naturaleza, áreas verdes y juegos infantiles para los más pequeños.",
   },
   {
